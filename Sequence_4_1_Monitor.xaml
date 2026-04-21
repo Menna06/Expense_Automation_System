@@ -74,24 +74,24 @@
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Sequence_4_1_Monitor" sap:VirtualizedContainerService.HintSize="802,826" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="FileExists" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="True" DisplayName="While" sap:VirtualizedContainerService.HintSize="488,688.5" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="488,688.5" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,557" sap2010:WorkflowViewState.IdRef="Sequence_2">
-          <Sequence.Variables>
-            <Variable x:TypeArguments="x:Boolean" Name="boolReceiptFound" />
-          </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:FileExistsX Exists="{x:Null}" DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="452,168" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="C:\Receipts_Input\receipt.txt" />
-          <If Condition="[boolReceiptFound]" sap:VirtualizedContainerService.HintSize="452,329" sap2010:WorkflowViewState.IdRef="If_1">
+          <ui:FileExistsX DisplayName="File Exists" Exists="[FileExists]" sap:VirtualizedContainerService.HintSize="452,168" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="C:\Receipts_Input\receipt.txt" />
+          <If Condition="[FileExists]" sap:VirtualizedContainerService.HintSize="452,329" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Then>
               <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
@@ -114,6 +114,9 @@
           </If>
         </Sequence>
       </ui:InterruptibleWhile.Body>
+      <ui:InterruptibleWhile.Condition>
+        <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="FileExists = False" />
+      </ui:InterruptibleWhile.Condition>
     </ui:InterruptibleWhile>
     <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="488,114.5" sap2010:WorkflowViewState.IdRef="Delay_1" />
   </Sequence>

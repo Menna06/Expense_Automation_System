@@ -87,6 +87,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadTextFile File="{x:Null}" Content="[out_RawText]" DisplayName="Read Text File" FileName="C:/Receipts_Input/receipt.txt" sap:VirtualizedContainerService.HintSize="450,115" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+    <ui:ReadTextFile File="{x:Null}" Content="[out_RawText]" DisplayName="Read Text File" FileName="C:/Receipts_Input/receipt.txt" sap:VirtualizedContainerService.HintSize="450,124" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,114.5" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;REAL FILE CONTENT: &quot; + out_RawText]" />
   </Sequence>
 </Activity>
