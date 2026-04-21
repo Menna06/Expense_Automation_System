@@ -81,8 +81,8 @@
         "C:\\Users\\User\\.nuget\\packages\\system.servicemodel.duplex\\4.9.0\\lib/net6.0/System.ServiceModel.Duplex.dll",
         "C:\\Users\\User\\.nuget\\packages\\system.servicemodel.http\\4.9.0\\lib/net6.0/System.ServiceModel.Http.dll",
         "C:\\Users\\User\\.nuget\\packages\\system.servicemodel.nettcp\\4.9.0\\lib/net6.0/System.ServiceModel.NetTcp.dll",
-        "C:\\Users\\User\\.nuget\\packages\\system.servicemodel.primitives\\4.9.0\\lib/net6.0/System.ServiceModel.dll",
         "C:\\Users\\User\\.nuget\\packages\\system.servicemodel.primitives\\4.9.0\\lib/net6.0/System.ServiceModel.Primitives.dll",
+        "C:\\Users\\User\\.nuget\\packages\\system.servicemodel.primitives\\4.9.0\\lib/net6.0/System.ServiceModel.dll",
         "C:\\Users\\User\\.nuget\\packages\\system.servicemodel.security\\4.9.0\\lib/net6.0/System.ServiceModel.Security.dll",
         "C:\\Users\\User\\.nuget\\packages\\system.servicemodel.syndication\\6.0.0\\lib/net6.0/System.ServiceModel.Syndication.dll",
         "C:\\Users\\User\\.nuget\\packages\\system.serviceprocess.servicecontroller\\6.0.1\\runtimes/win/lib/net6.0/System.ServiceProcess.ServiceController.dll",
@@ -102,6 +102,20 @@
         "C:\\Users\\User\\.nuget\\packages\\uipath.telemetry.client\\2.9.1\\lib/netstandard2.0/TelemetryClient.dll"
       ],
       "Path": "C:\\Users\\User\\.nuget\\packages\\uipath.system.activities\\26.2.4"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.FTP.Activities",
+        "Version": "2.4.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\User\\.nuget\\packages\\fluentftp\\51.1.0\\lib/net6.0/FluentFTP.dll",
+        "C:\\Users\\User\\.nuget\\packages\\ssh.net\\2024.1.0\\lib/net8.0/Renci.SshNet.dll",
+        "C:\\Users\\User\\.nuget\\packages\\uipath.ftp.activities\\2.4.0\\lib/net6.0-windows7.0/UiPath.FTP.Activities.Design.dll",
+        "C:\\Users\\User\\.nuget\\packages\\uipath.ftp.activities\\2.4.0\\lib/net6.0-windows7.0/UiPath.FTP.Activities.dll",
+        "C:\\Users\\User\\.nuget\\packages\\uipath.ftp.activities\\2.4.0\\lib/net6.0-windows7.0/UiPath.FTP.dll"
+      ],
+      "Path": "C:\\Users\\User\\.nuget\\packages\\uipath.ftp.activities\\2.4.0"
     }
   ],
   "Conflicts": [],
@@ -120,6 +134,11 @@
           "Item2": "[4.7.0, )"
         }
       ]
+    },
+    "FluentFTP": {
+      "Id": "FluentFTP",
+      "Version": "51.1.0",
+      "Dependencies": []
     },
     "Markdig.Signed": {
       "Id": "Markdig.Signed",
@@ -1162,6 +1181,11 @@
       "Version": "1.4.2",
       "Dependencies": []
     },
+    "SSH.NET": {
+      "Id": "SSH.NET",
+      "Version": "2024.1.0",
+      "Dependencies": []
+    },
     "System.Activities.ViewModels": {
       "Id": "System.Activities.ViewModels",
       "Version": "1.20251103.2",
@@ -1780,6 +1804,20 @@
         }
       ]
     },
+    "UiPath.FTP.Activities": {
+      "Id": "UiPath.FTP.Activities",
+      "Version": "2.4.0",
+      "Dependencies": [
+        {
+          "Item1": "FluentFTP",
+          "Item2": "[51.1.0, )"
+        },
+        {
+          "Item1": "SSH.NET",
+          "Item2": "[2024.1.0, )"
+        }
+      ]
+    },
     "UiPath.OpenTelemetry.Contracts": {
       "Id": "UiPath.OpenTelemetry.Contracts",
       "Version": "2.9.1",
@@ -2045,6 +2083,16 @@
         "C:\\Users\\User\\.nuget\\packages\\dynamicexpresso.core\\2.12.0\\lib\\netstandard2.0\\DynamicExpresso.Core.dll"
       ],
       "Path": "C:\\Users\\User\\.nuget\\packages\\dynamicexpresso.core\\2.12.0"
+    },
+    {
+      "Package": {
+        "Id": "FluentFTP",
+        "Version": "51.1.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\User\\.nuget\\packages\\fluentftp\\51.1.0\\lib\\net6.0\\FluentFTP.dll"
+      ],
+      "Path": "C:\\Users\\User\\.nuget\\packages\\fluentftp\\51.1.0"
     },
     {
       "Package": {
@@ -2755,6 +2803,16 @@
     },
     {
       "Package": {
+        "Id": "SSH.NET",
+        "Version": "2024.1.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\User\\.nuget\\packages\\ssh.net\\2024.1.0\\lib\\net8.0\\Renci.SshNet.dll"
+      ],
+      "Path": "C:\\Users\\User\\.nuget\\packages\\ssh.net\\2024.1.0"
+    },
+    {
+      "Package": {
         "Id": "System.Activities.ViewModels",
         "Version": "1.20251103.2"
       },
@@ -2859,8 +2917,8 @@
         "Version": "6.0.0"
       },
       "Assemblies": [
-        "C:\\Users\\User\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\runtimes\\win\\lib\\net6.0\\System.Diagnostics.EventLog.dll",
-        "C:\\Users\\User\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\runtimes\\win\\lib\\net6.0\\System.Diagnostics.EventLog.Messages.dll"
+        "C:\\Users\\User\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\runtimes\\win\\lib\\net6.0\\System.Diagnostics.EventLog.Messages.dll",
+        "C:\\Users\\User\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\runtimes\\win\\lib\\net6.0\\System.Diagnostics.EventLog.dll"
       ],
       "Path": "C:\\Users\\User\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0"
     },
@@ -3180,8 +3238,8 @@
         "Version": "4.9.0"
       },
       "Assemblies": [
-        "C:\\Users\\User\\.nuget\\packages\\system.servicemodel.primitives\\4.9.0\\lib\\net6.0\\System.ServiceModel.dll",
-        "C:\\Users\\User\\.nuget\\packages\\system.servicemodel.primitives\\4.9.0\\lib\\net6.0\\System.ServiceModel.Primitives.dll"
+        "C:\\Users\\User\\.nuget\\packages\\system.servicemodel.primitives\\4.9.0\\lib\\net6.0\\System.ServiceModel.Primitives.dll",
+        "C:\\Users\\User\\.nuget\\packages\\system.servicemodel.primitives\\4.9.0\\lib\\net6.0\\System.ServiceModel.dll"
       ],
       "Path": "C:\\Users\\User\\.nuget\\packages\\system.servicemodel.primitives\\4.9.0"
     },
@@ -3334,6 +3392,18 @@
         "C:\\Users\\User\\.nuget\\packages\\uipath.errorinfo\\25.10.2\\lib\\net8.0-windows7.0\\UiPath.ErrorInfo.dll"
       ],
       "Path": "C:\\Users\\User\\.nuget\\packages\\uipath.errorinfo\\25.10.2"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.FTP.Activities",
+        "Version": "2.4.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\User\\.nuget\\packages\\uipath.ftp.activities\\2.4.0\\lib\\net6.0-windows7.0\\UiPath.FTP.Activities.Design.dll",
+        "C:\\Users\\User\\.nuget\\packages\\uipath.ftp.activities\\2.4.0\\lib\\net6.0-windows7.0\\UiPath.FTP.Activities.dll",
+        "C:\\Users\\User\\.nuget\\packages\\uipath.ftp.activities\\2.4.0\\lib\\net6.0-windows7.0\\UiPath.FTP.dll"
+      ],
+      "Path": "C:\\Users\\User\\.nuget\\packages\\uipath.ftp.activities\\2.4.0"
     },
     {
       "Package": {

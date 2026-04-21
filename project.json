@@ -4,6 +4,7 @@
   "description": "Our part of the system handles the expense side of the project. We are building a bot that \"watches\" a folder for new receipts and automatically saves that information into an Excel file. The bot is designed to run on it's own without a user needing to click a start button for every single file.",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.FTP.Activities": "[2.4.0]",
     "UiPath.System.Activities": "[26.2.4]"
   },
   "webServices": [],
